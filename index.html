@@ -48,7 +48,7 @@
         </div>
       </a>
 
-      <!-- Pill Nav Container with real-time Scroll-Spy -->
+      <!-- Desktop Pill Nav Container with real-time Scroll-Spy -->
       <nav class="nav-pill-container">
         <a href="#website-hero" class="nav-link active" data-nav-section="website-hero">Home</a>
         <a href="#about" class="nav-link" data-nav-section="about">About</a>
@@ -65,9 +65,45 @@
       <div class="nav-actions">
         <a href="tel:+918428775012" class="phone-link">
           <i data-lucide="phone" class="icon-sm"></i>
-          +91 84287 75012
+          <span class="phone-text">+91 84287 75012</span>
         </a>
-        <button id="open-modal-btn" class="btn btn-primary">Enroll Now</button>
+        <button id="open-modal-btn" class="btn btn-primary nav-enroll-btn">Enroll Now</button>
+        
+        <!-- Mobile/Tablet Hamburger Menu Button -->
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile & Tablet Off-Canvas Navigation Drawer -->
+    <div id="mobile-nav-drawer" class="mobile-nav-drawer">
+      <div class="mobile-drawer-header">
+        <div class="brand-text">
+          <span class="brand-name">GREEN<span class="highlight">INK</span></span>
+          <span class="brand-tag">ACADEMY</span>
+        </div>
+        <button id="close-mobile-nav" class="mobile-drawer-close">&times;</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="#website-hero" class="mobile-nav-link active">Home</a>
+        <a href="#about" class="mobile-nav-link">About Us</a>
+        <a href="#courses" class="mobile-nav-link">Courses & Programs</a>
+        <a href="#store" class="mobile-nav-link">Books Store</a>
+        <a href="#features" class="mobile-nav-link">PMS Mentorship</a>
+        <a href="#events" class="mobile-nav-link">Orientation Events</a>
+        <a href="#careers" class="mobile-nav-link">Join Our Team</a>
+        <a href="#blog" class="mobile-nav-link">Learning Blog</a>
+        <a href="#lms" class="mobile-nav-link">GreenInk LMS</a>
+        <a href="#contact" class="mobile-nav-link">Contact & Support</a>
+      </nav>
+      <div class="mobile-drawer-footer">
+        <a href="tel:+918428775012" class="btn btn-secondary btn-full" style="margin-bottom: 10px;">
+          <i data-lucide="phone" class="icon-sm"></i> Call Helpline
+        </a>
+        <button class="btn btn-primary btn-full open-modal">Enroll Now</button>
       </div>
     </div>
   </header>

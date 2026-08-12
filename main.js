@@ -282,14 +282,14 @@ function setupScrollReveal() {
 // Real-time Scroll-Spy Navigation
 function setupScrollSpy() {
   const sections = document.querySelectorAll('section[id], footer[id]');
-  const navLinks = document.querySelectorAll('.nav-pill-container .nav-link');
+  const navLinks = document.querySelectorAll('.nav-pill-container .nav-link, .mobile-nav-link');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
         navLinks.forEach(link => {
-          if (link.getAttribute('data-nav-section') === id) {
+          if (link.getAttribute('href') === `#${id}` || link.getAttribute('data-nav-section') === id) {
             link.classList.add('active');
           } else {
             link.classList.remove('active');
@@ -303,6 +303,32 @@ function setupScrollSpy() {
   });
 
   sections.forEach(section => observer.observe(section));
+}
+
+// Mobile and Tablet Off-Canvas Navigation Drawer Handler
+function setupMobileNav() {
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const drawer = document.getElementById('mobile-nav-drawer');
+  const closeBtn = document.getElementById('close-mobile-nav');
+  const navLinks = document.querySelectorAll('.mobile-nav-link');
+
+  if (toggleBtn && drawer) {
+    toggleBtn.addEventListener('click', () => {
+      drawer.classList.toggle('active');
+    });
+  }
+
+  if (closeBtn && drawer) {
+    closeBtn.addEventListener('click', () => {
+      drawer.classList.remove('active');
+    });
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (drawer) drawer.classList.remove('active');
+    });
+  });
 }
 
 // Interactive Category Filters
@@ -1357,6 +1383,7 @@ async function init() {
   initLucideIcons();
   setupScrollReveal();
   setupScrollSpy();
+  setupMobileNav();
   setupTabsAndFilters();
   setupCourseDrawer();
   setupModal();
