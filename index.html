@@ -878,7 +878,7 @@
     <!-- GreenInk AI Counseling Chatbot Trigger -->
     <button id="chatbot-float-btn" class="float-btn float-chatbot" title="Open GreenInk AI Counselor">
       <span class="bot-status-dot"></span>
-      <i data-lucide="sparkles" class="bot-icon"></i>
+      <i data-lucide="bot" class="bot-icon"></i>
       <span class="float-btn-label">AI Counselor</span>
     </button>
   </div>
@@ -889,7 +889,7 @@
     <div class="chat-header">
       <div class="chat-header-info">
         <div class="chat-avatar">
-          <i data-lucide="sparkles" class="icon-sm"></i>
+          <i data-lucide="bot" class="icon-sm"></i>
         </div>
         <div>
           <h4 class="chat-title">GreenInk AI Counselor</h4>
@@ -898,24 +898,26 @@
       </div>
       <div class="chat-header-actions">
         <button id="restart-chat-btn" class="chat-header-btn" title="Restart Chat">
-          <i data-lucide="clock" class="icon-sm"></i>
+          <i data-lucide="rotate-ccw" class="icon-sm"></i>
         </button>
-        <button id="close-chatbot-btn" class="chat-header-btn" title="Close Chat">&times;</button>
+        <button id="close-chatbot-btn" class="chat-header-btn" title="Close Chat">
+          <i data-lucide="x" class="icon-sm"></i>
+        </button>
       </div>
     </div>
 
-    <!-- Category Selector Chips (Topic Shortcuts) -->
+    <!-- Category Selector Chips (Topic Shortcuts with Lucide Icons) -->
     <div class="chat-category-chips">
-      <button class="chat-chip active" data-chat-cat="all">All Topics</button>
-      <button class="chat-chip" data-chat-cat="tnpsc">🎯 TNPSC</button>
-      <button class="chat-chip" data-chat-cat="banking">🏦 Banking & SSC</button>
-      <button class="chat-chip" data-chat-cat="tet">🎓 TN TET</button>
-      <button class="chat-chip" data-chat-cat="pms">🥇 Mentorship</button>
-      <button class="chat-chip" data-chat-cat="timings">⏱️ Timings</button>
-      <button class="chat-chip" data-chat-cat="lms">📱 LMS & App</button>
-      <button class="chat-chip" data-chat-cat="store">📖 Book Store</button>
-      <button class="chat-chip" data-chat-cat="fees">💳 Fees & Admission</button>
-      <button class="chat-chip" data-chat-cat="academy">🏛️ About Us</button>
+      <button class="chat-chip active" data-chat-cat="all"><i data-lucide="help-circle" class="icon-inline"></i> All Topics</button>
+      <button class="chat-chip" data-chat-cat="tnpsc"><i data-lucide="target" class="icon-inline"></i> TNPSC</button>
+      <button class="chat-chip" data-chat-cat="banking"><i data-lucide="building-2" class="icon-inline"></i> Banking & SSC</button>
+      <button class="chat-chip" data-chat-cat="tet"><i data-lucide="graduation-cap" class="icon-inline"></i> TN TET</button>
+      <button class="chat-chip" data-chat-cat="pms"><i data-lucide="award" class="icon-inline"></i> Mentorship</button>
+      <button class="chat-chip" data-chat-cat="timings"><i data-lucide="clock" class="icon-inline"></i> Timings</button>
+      <button class="chat-chip" data-chat-cat="lms"><i data-lucide="laptop" class="icon-inline"></i> LMS & App</button>
+      <button class="chat-chip" data-chat-cat="store"><i data-lucide="book-open" class="icon-inline"></i> Book Store</button>
+      <button class="chat-chip" data-chat-cat="fees"><i data-lucide="credit-card" class="icon-inline"></i> Fees & Admission</button>
+      <button class="chat-chip" data-chat-cat="academy"><i data-lucide="shield-check" class="icon-inline"></i> About Us</button>
     </div>
 
     <!-- Active Chat Conversation Stream -->
@@ -938,7 +940,7 @@
       <form id="chat-input-form" class="chat-form">
         <input type="text" id="chat-user-input" placeholder="Type your question (e.g. TET fees, TNPSC batch)..." required autocomplete="off">
         <button type="submit" class="chat-send-btn" title="Send Question">
-          <i data-lucide="arrow-right" class="icon-sm"></i>
+          <i data-lucide="send" class="icon-sm"></i>
         </button>
       </form>
       <div class="chat-footer-handoff">

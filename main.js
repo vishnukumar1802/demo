@@ -27,7 +27,15 @@ import {
   Mic,
   Search,
   MessageCircle,
-  ChevronDown
+  ChevronDown,
+  Bot,
+  Send,
+  RotateCcw,
+  X,
+  CreditCard,
+  Building2,
+  HelpCircle,
+  ChevronRight
 } from 'lucide';
 
 // Initialize Lucide Vector Icons Engine
@@ -60,7 +68,15 @@ function initLucideIcons() {
       Mic,
       Search,
       MessageCircle,
-      ChevronDown
+      ChevronDown,
+      Bot,
+      Send,
+      RotateCcw,
+      X,
+      CreditCard,
+      Building2,
+      HelpCircle,
+      ChevronRight
     }
   });
 }
@@ -1161,28 +1177,28 @@ function setupChatbot() {
     const welcomeHtml = `
       <div class="chat-msg-row bot-msg-row">
         <div class="msg-bot-avatar">
-          <i data-lucide="sparkles" class="icon-inline"></i>
+          <i data-lucide="bot" class="icon-inline"></i>
         </div>
         <div class="chat-bubble bot-bubble">
-          <p>👋 <strong>Welcome to GreenInk Academy!</strong></p>
-          <p>I am your AI Admissions & Mentorship Counselor. Tap any question below or type your query to get instant authentic answers!</p>
+          <p><strong>Welcome to GreenInk Academy!</strong></p>
+          <p>I am your AI Admissions & Mentorship Counselor. Tap any question below or type your query to get instant authentic answers:</p>
           
           <div class="prompt-chips-container">
             <button class="prompt-chip" data-ask="What is the fee structure for TET 2026 Batch-1?">
-              <span>🎓 What is the fee for TET 2026 Batch-1?</span>
-              <span class="prompt-chip-icon">➔</span>
+              <span>What is the fee for TET 2026 Batch-1?</span>
+              <i data-lucide="chevron-right" class="prompt-chip-icon"></i>
             </button>
             <button class="prompt-chip" data-ask="What TNPSC exams does GreenInk coach for?">
-              <span>🎯 What TNPSC exams does GreenInk coach for?</span>
-              <span class="prompt-chip-icon">➔</span>
+              <span>What TNPSC exams does GreenInk coach for?</span>
+              <i data-lucide="chevron-right" class="prompt-chip-icon"></i>
             </button>
             <button class="prompt-chip" data-ask="Can I prepare for government exams while working a full-time job?">
-              <span>⏱️ Can I prepare while working a full-time job?</span>
-              <span class="prompt-chip-icon">➔</span>
+              <span>Can I prepare while working a full-time job?</span>
+              <i data-lucide="chevron-right" class="prompt-chip-icon"></i>
             </button>
             <button class="prompt-chip" data-ask="How does GreenInk help students improve speed math in Quantitative Aptitude?">
-              <span>🏦 How does GreenInk teach Banking Speed Math?</span>
-              <span class="prompt-chip-icon">➔</span>
+              <span>How does GreenInk teach Banking Speed Math?</span>
+              <i data-lucide="chevron-right" class="prompt-chip-icon"></i>
             </button>
           </div>
         </div>
@@ -1203,14 +1219,14 @@ function setupChatbot() {
     const promptButtons = catItems.map(item => `
       <button class="prompt-chip" data-ask="${item.q}">
         <span>${item.q}</span>
-        <span class="prompt-chip-icon">➔</span>
+        <i data-lucide="chevron-right" class="prompt-chip-icon"></i>
       </button>
     `).join('');
 
     const botMsgHtml = `
       <div class="chat-msg-row bot-msg-row">
         <div class="msg-bot-avatar">
-          <i data-lucide="sparkles" class="icon-inline"></i>
+          <i data-lucide="bot" class="icon-inline"></i>
         </div>
         <div class="chat-bubble bot-bubble">
           <p>Here are popular questions about <strong>${catName}</strong>. Tap one to get the answer:</p>
@@ -1263,14 +1279,14 @@ function setupChatbot() {
         const relatedChips = related.map(r => `
           <button class="prompt-chip" data-ask="${r.q}">
             <span>${r.q}</span>
-            <span class="prompt-chip-icon">➔</span>
+            <i data-lucide="chevron-right" class="prompt-chip-icon"></i>
           </button>
         `).join('');
 
         botResponseHtml = `
           <div class="chat-msg-row bot-msg-row">
             <div class="msg-bot-avatar">
-              <i data-lucide="sparkles" class="icon-inline"></i>
+              <i data-lucide="bot" class="icon-inline"></i>
             </div>
             <div class="chat-bubble bot-bubble">
               <p><strong>${match.q}</strong></p>
@@ -1302,7 +1318,7 @@ function setupChatbot() {
         botResponseHtml = `
           <div class="chat-msg-row bot-msg-row">
             <div class="msg-bot-avatar">
-              <i data-lucide="sparkles" class="icon-inline"></i>
+              <i data-lucide="bot" class="icon-inline"></i>
             </div>
             <div class="chat-bubble bot-bubble">
               <p>Thank you for asking about <strong>"${cleanQuestion}"</strong>!</p>
