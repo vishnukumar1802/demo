@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenInk Academy | Tech-Enabled Government Exam Coaching</title>
+  <meta name="description" content="Join GreenInk CCE for TNPSC, Banking, SSC, Railways, TET & TNUSRB coaching with tech-enabled mentorship, study material store, LMS portal, and proven exam strategies.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader-overlay">
+    <div class="loader-content">
+      <div class="spinner-wrapper">
+        <svg class="spinner-ring" viewBox="0 0 100 100">
+          <circle class="spinner-track" cx="50" cy="50" r="42"></circle>
+          <circle id="spinner-progress" class="spinner-fill" cx="50" cy="50" r="42"></circle>
+        </svg>
+        <span id="loader-percent" class="loader-text">0%</span>
+      </div>
+      <p class="loader-subtext">Loading GreenInk Academy Experience...</p>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Indicator (Top Line) -->
+  <div class="progress-bar-container">
+    <div id="progress-bar" class="progress-bar-fill"></div>
+  </div>
+
+  <!-- Glassmorphic Header / Navigation Bar matching GreenInk CCE Navbar Layout -->
+  <header id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">
+        <div class="brand-logo">
+          <svg class="logo-icon" viewBox="0 0 36 36" fill="none">
+            <path d="M18 3L4 10V26L18 33L32 26V10L18 3Z" stroke="#006c53" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M18 9L9 14V22L18 27L27 22V14L18 9Z" fill="#85f4cd" fill-opacity="0.3" stroke="#EAB308" stroke-width="1.5"/>
+            <circle cx="18" cy="18" r="3" fill="#1b4d3e"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">GREEN<span class="highlight">INK</span></span>
+          <span class="brand-tag">ACADEMY</span>
+        </div>
+      </a>
+
+      <!-- Pill Nav Container with real-time Scroll-Spy -->
+      <nav class="nav-pill-container">
+        <a href="#website-hero" class="nav-link active" data-nav-section="website-hero">Home</a>
+        <a href="#about" class="nav-link" data-nav-section="about">About</a>
+        <a href="#courses" class="nav-link" data-nav-section="courses">Courses</a>
+        <a href="#store" class="nav-link" data-nav-section="store">Store</a>
+        <a href="#features" class="nav-link" data-nav-section="features">Features</a>
+        <a href="#events" class="nav-link" data-nav-section="events">Events</a>
+        <a href="#careers" class="nav-link" data-nav-section="careers">Careers</a>
+        <a href="#blog" class="nav-link" data-nav-section="blog">Blog</a>
+        <a href="#lms" class="nav-link" data-nav-section="lms">GreenInk LMS</a>
+        <a href="#contact" class="nav-link" data-nav-section="contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+918428775012" class="phone-link">
+          <i data-lucide="phone" class="icon-sm"></i>
+          +91 84287 75012
+        </a>
+        <button id="open-modal-btn" class="btn btn-primary">Enroll Now</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- UNCHANGED 3D SCROLL CINEMATIC BOOK SECTION -->
+  <section id="cinematic-book" class="cinematic-book-section">
+    <div class="cinematic-viewport">
+      <canvas id="scroll-canvas"></canvas>
+
+      <!-- Minimal Bottom Scroll Pill Badge -->
+      <div class="ui-overlay">
+        <div id="scroll-badge" class="scroll-badge">
+          <span class="badge-dot"></span>
+          <span id="frame-counter">Frame 001 / 240</span>
+          <span class="badge-divider">•</span>
+          <span id="scroll-hint">Scroll down to open yearbook</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEDICATED STITCH EMERALD ZENITH HERO SECTION -->
+  <section id="website-hero" class="website-hero-section">
+    <div class="container hero-content-box" data-reveal="true">
+      <div class="hero-badge" data-reveal="true" style="--delay: 100ms;">
+        <i data-lucide="trophy" class="icon-inline"></i>
+        <span>Awarded "Best Coaching Institute for Research & Innovation"</span>
+      </div>
+
+      <h1 class="hero-title" data-reveal="true" style="--delay: 200ms;">
+        Learn Smart. Learn Anytime.<br><span class="highlight-text">Learn Your Way.</span>
+      </h1>
+      
+      <p class="hero-description" data-reveal="true" style="--delay: 300ms;">
+        Founded in 2019, GreenInk Academy is the premier tech-enabled institute shaping government exam success for TNPSC, Banking, SSC, Railways, TET & TNUSRB aspirants across Tamil Nadu.
+      </p>
+      
+      <div class="hero-cta-group" data-reveal="true" style="--delay: 400ms;">
+        <button class="btn btn-primary open-modal">Start Your Journey</button>
+        <a href="#about" class="btn btn-secondary">About GreenInk ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REST OF WEBSITE CONTENT -->
+  <div class="main-content">
+
+    <!-- Impact Stats Bar -->
+    <section class="stats-section">
+      <div class="container stats-grid">
+        <div class="stat-card" data-reveal="true" style="--delay: 100ms;">
+          <div class="stat-number">6+</div>
+          <div class="stat-label">Years of Expertise</div>
+        </div>
+        <div class="stat-card" data-reveal="true" style="--delay: 200ms;">
+          <div class="stat-number" data-target="7500">0+</div>
+          <div class="stat-label">Trained Aspirants</div>
+        </div>
+        <div class="stat-card" data-reveal="true" style="--delay: 300ms;">
+          <div class="stat-number" data-target="2000">0+</div>
+          <div class="stat-label">Active Learners</div>
+        </div>
+        <div class="stat-card" data-reveal="true" style="--delay: 400ms;">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">College Collaborations</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. AUTHENTIC ABOUT GREENINK ACADEMY SECTION -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        
+        <!-- Header & Origin -->
+        <div class="section-header" data-reveal="true">
+          <span class="section-tag">ABOUT GREENINK ACADEMY</span>
+          <h2 class="section-title">Where Expert Guidance Meets Smart Technology</h2>
+          <p class="section-subtitle">Founded in 2019 in collaboration with Mahendras, GreenInk Academy began as a high-performing hybrid institute and has evolved into a technology-driven online academy built for results.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-content" data-reveal="true" style="--delay: 150ms;">
+            <h3 class="about-subheading">Our Journey & Mission</h3>
+            <p>At GreenInk, learning is structured for success—from well-planned live classes to mentorship by top ex-government officials such as <strong>Dr. Sylendra Babu IPS</strong> (Ex-DGP), 10+ serving officers, and 100+ subject experts across disciplines.</p>
+            <p>With collaborations spanning government schemes, SRM University, and 50+ colleges across Tamil Nadu, GreenInk has empowered over 7,500+ aspirants nationwide. Powered by an AI-driven LMS that tracks progress and builds confidence, GreenInk ensures the right methodology, consistent practice, and predictable success.</p>
+            
+            <div class="tv-recognition-box" data-reveal="true" style="--delay: 250ms;">
+              <span class="tv-badge"><i data-lucide="tv" class="icon-inline"></i> FEATURED ON TELEVISION</span>
+              <h4>Recognized on TV for Impact & Innovation</h4>
+              <p>• <strong>Vijay Super Channel:</strong> Showcasing our dedication to transforming education and empowering students.</p>
+              <p>• <strong>News 7 Channel:</strong> Highlighted for innovative research-driven approach to competitive exam coaching.</p>
+            </div>
+          </div>
+
+          <!-- Founder Card -->
+          <div class="founder-card" data-reveal="true" style="--delay: 200ms;">
+            <div class="founder-badge">FOUNDER & LEADERSHIP</div>
+            <h3>Mrs. Ponchitra Sathyanarayanan</h3>
+            <p class="founder-title">Educationalist | Industrialist | Certified Career Counselor | Motivational Speaker</p>
+            <p class="founder-bio">Inspired by <strong>Dr. A.P.J. Abdul Kalam’s</strong> vision, our founder empowers students through education, industry insight, and expert career guidance. Known for building student-centric academic systems blending mentorship and measurable outcomes with 15+ years of leadership experience.</p>
+            <div class="founder-exp-pill">15+ Years Academic Leadership</div>
+          </div>
+        </div>
+
+        <!-- Industry Leaders / Distinguished Mentors -->
+        <div class="mentors-showcase-container">
+          <div class="section-header" style="margin-top:60px; margin-bottom:32px;" data-reveal="true">
+            <span class="section-tag">LEARN FROM INDUSTRY LEADERS</span>
+            <h3 class="section-title">Personalized Guidance from Renowned Officers & Authors</h3>
+          </div>
+
+          <div class="mentors-grid">
+            <div class="mentor-card" data-reveal="true" style="--delay: 100ms;">
+              <div class="mentor-badge">LEADERSHIP MENTOR</div>
+              <h4>Dr. Sylendra Babu IPS</h4>
+              <p class="mentor-role">Ex-Director General of Police (DGP Tamil Nadu)</p>
+              <p class="mentor-desc">A guiding force at GreenInk, Sylendra Babu sir inspires aspirants through powerful webinars and mentoring sessions—instilling discipline, clarity, and the mindset to aim higher.</p>
+            </div>
+
+            <div class="mentor-card" data-reveal="true" style="--delay: 200ms;">
+              <div class="mentor-badge">CENTRAL EXAMS EXPERT</div>
+              <h4>Mr. Mohan Kumar</h4>
+              <p class="mentor-role">Ex-Banker & SEBI Certified SMART Trainer (Finance Ministry Awardee)</p>
+              <p class="mentor-desc">With service at BOI, IPPB, and BOM, Mohan Kumar sir designed GreenInk’s Central Government Exams curriculum, mentoring banking and SSC aspirants to top ranks.</p>
+            </div>
+
+            <div class="mentor-card" data-reveal="true" style="--delay: 300ms;">
+              <div class="mentor-badge">CIVIL SERVICES STRATEGIST</div>
+              <h4>Mr. Ilayaraja Kannan</h4>
+              <p class="mentor-role">TNPSC Author & Civil Services Mentor (APJ Abdul Kalam Awardee)</p>
+              <p class="mentor-desc">Renowned author for <em>The Hindu</em> and mentor to 200+ government officers, Ilayaraja Kannan sir brings deep exam insight and proven strategies for TNPSC Group 1, 2, 4.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vision, Mission & Core Values Grid -->
+        <div class="vmv-grid">
+          <div class="vmv-card" data-reveal="true" style="--delay: 100ms;">
+            <div class="vmv-icon"><i data-lucide="eye" class="icon-vmv"></i></div>
+            <h3>Our Vision</h3>
+            <p>To build confident, future-ready learners through meaningful education that balances academic depth, practical relevance, and human mentorship.</p>
+          </div>
+
+          <div class="vmv-card" data-reveal="true" style="--delay: 200ms;">
+            <div class="vmv-icon"><i data-lucide="target" class="icon-vmv"></i></div>
+            <h3>Our Mission</h3>
+            <p>To create research-led, technology-enabled learning systems that guide every learner with clarity, consistency, and personalized support—transforming effort into outcomes.</p>
+          </div>
+
+          <div class="vmv-card" data-reveal="true" style="--delay: 300ms;">
+            <div class="vmv-icon"><i data-lucide="scale" class="icon-vmv"></i></div>
+            <h3>Our Core Values</h3>
+            <p>• Student-First Thinking<br>• Integrity & Trust<br>• Consistency Over Shortcuts<br>• Purposeful Innovation<br>• Collaboration & Lifelong Learning</p>
+          </div>
+        </div>
+
+        <!-- Why GreenInk Is Different (5 Core Beliefs) -->
+        <div class="beliefs-container" data-reveal="true">
+          <h3>Why GreenInk Is Different — Our 5 Core Beliefs</h3>
+          <div class="beliefs-grid">
+            <div class="belief-card" data-reveal="true" style="--delay: 100ms;">
+              <span class="belief-num">01</span>
+              <p>We believe <strong>3–4 focused hours a day</strong> are enough to crack any government exam—without quitting your job or putting life on hold.</p>
+            </div>
+            <div class="belief-card" data-reveal="true" style="--delay: 200ms;">
+              <span class="belief-num">02</span>
+              <p>We believe preparation isn’t one-size-fits-all—it should adapt to the aspirant, not the other way around.</p>
+            </div>
+            <div class="belief-card" data-reveal="true" style="--delay: 300ms;">
+              <span class="belief-num">03</span>
+              <p>We believe every aspirant needs a personal coach, because doubts don’t wait for class schedules.</p>
+            </div>
+            <div class="belief-card" data-reveal="true" style="--delay: 400ms;">
+              <span class="belief-num">04</span>
+              <p>We believe technology should work for students, making preparation smarter, trackable, and measurable.</p>
+            </div>
+            <div class="belief-card" data-reveal="true" style="--delay: 500ms;">
+              <span class="belief-num">05</span>
+              <p>We believe early skill exposure—aligned with NEP for schools and UGC for colleges—is essential to build strong foundations.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. COURSES PAGE & SUB-PAGE EXPERIENCE -->
+    <section id="courses" class="section courses-section">
+      <div class="container">
+        <div class="section-header" data-reveal="true">
+          <span class="section-tag">GREENINK STRUCTURED PREPARATION PROGRAMS</span>
+          <h2 class="section-title">Explore Our Category-Wise Coaching Batches</h2>
+          <p class="section-subtitle">A complete academic system designed for different levels of seriousness and exam goals.</p>
+        </div>
+
+        <!-- Course Category Filters -->
+        <div class="category-filter-bar" data-reveal="true" style="--delay: 100ms;">
+          <button class="filter-chip active" data-filter="all">All Programs</button>
+          <button class="filter-chip" data-filter="regular">Regular Courses</button>
+          <button class="filter-chip" data-filter="tnpsc">TNPSC</button>
+          <button class="filter-chip" data-filter="flexi">FLEXI Programs</button>
+          <button class="filter-chip" data-filter="central">Central Govt Exams</button>
+          <button class="filter-chip" data-filter="tet">TN TET</button>
+        </div>
+
+        <!-- Exam Cards Grid -->
+        <div class="exam-cards-grid">
+          
+          <!-- Course 1: TET 2026 BATCH-1 -->
+          <div class="exam-card" data-category="tet" data-reveal="true" style="--delay: 100ms;">
+            <div class="exam-badge tet">TN TET</div>
+            <h3>TET 2026 BATCH-1</h3>
+            <p class="ideal-for"><strong>Ideal for:</strong> Govt & aided school teachers, private teachers, B.Ed / D.T.Ed graduates and final year students.</p>
+            <ul class="exam-features">
+              <li><i data-lucide="check" class="icon-check"></i> Special focus on Child Psychology & Pedagogy</li>
+              <li><i data-lucide="check" class="icon-check"></i> Daily live online classes (Zoom) & doubt clearing</li>
+              <li><i data-lucide="check" class="icon-check"></i> Soft copy topic-wise one-liner notes</li>
+              <li><i data-lucide="check" class="icon-check"></i> 500+ Daily Micro Tests</li>
+            </ul>
+            <div class="card-footer-flex">
+              <span class="course-price-tag">₹7,080.00</span>
+              <button class="btn btn-primary open-course-view" data-course-id="tet-2026">View Course Details →</button>
+            </div>
+          </div>
+
+          <!-- Course 2: TNPSC Focused Program -->
+          <div class="exam-card" data-category="tnpsc" data-reveal="true" style="--delay: 200ms;">
+            <div class="exam-badge tnpsc">TNPSC</div>
+            <h3>TNPSC Focused Program (Group 1 & 2)</h3>
+            <p class="ideal-for"><strong>Ideal for:</strong> Highly serious candidates aiming for top state civil services ranks.</p>
+            <ul class="exam-features">
+              <li><i data-lucide="check" class="icon-check"></i> Authored by Ilayaraja Kannan sir</li>
+              <li><i data-lucide="check" class="icon-check"></i> Samacheer Kalvi 6th to 12th line-by-line coverage</li>
+              <li><i data-lucide="check" class="icon-check"></i> Weekly subjective test evaluation & feedback</li>
+              <li><i data-lucide="check" class="icon-check"></i> Prelims + Mains integrated blueprint</li>
+            </ul>
+            <div class="card-footer-flex">
+              <span class="course-price-tag">₹12,500.00</span>
+              <button class="btn btn-primary open-course-view" data-course-id="tnpsc-focused">View Course Details →</button>
+            </div>
+          </div>
+
+          <!-- Course 3: Central Govt Exams Focused Program -->
+          <div class="exam-card" data-category="central" data-reveal="true" style="--delay: 300ms;">
+            <div class="exam-badge banking">CENTRAL GOVT</div>
+            <h3>Banking, SSC & Railways Focused Program</h3>
+            <p class="ideal-for"><strong>Ideal for:</strong> Long-term serious aspirants preparing for IBPS, SBI, SSC CGL & RRB NTPC.</p>
+            <ul class="exam-features">
+              <li><i data-lucide="check" class="icon-check"></i> Designed by Mohan Kumar sir (Ex-Banker)</li>
+              <li><i data-lucide="check" class="icon-check"></i> 1500+ speed math shortcuts & reasoning tricks</li>
+              <li><i data-lucide="check" class="icon-check"></i> CBT-1 & CBT-2 exam portal practice</li>
+              <li><i data-lucide="check" class="icon-check"></i> All-India rank test series</li>
+            </ul>
+            <div class="card-footer-flex">
+              <span class="course-price-tag">₹9,999.00</span>
+              <button class="btn btn-primary open-course-view" data-course-id="central-focused">View Course Details →</button>
+            </div>
+          </div>
+
+          <!-- Course 4: Indian Polity & Administration -->
+          <div class="exam-card" data-category="regular" data-reveal="true" style="--delay: 150ms;">
+            <div class="exam-badge technical">SPECIAL SUBJECT</div>
+            <h3>Indian Polity & Indian Administration</h3>
+            <p class="ideal-for"><strong>Ideal for:</strong> Aspirants seeking 100% conceptual clarity in Constitutional Articles & TN Governance.</p>
+            <ul class="exam-features">
+              <li><i data-lucide="check" class="icon-check"></i> Topic-wise tests after each unit</li>
+              <li><i data-lucide="check" class="icon-check"></i> Weekly revision classes & doubt solving</li>
+              <li><i data-lucide="check" class="icon-check"></i> Free study materials & PYQ analysis</li>
+            </ul>
+            <div class="card-footer-flex">
+              <span class="course-price-tag">₹2,999.00</span>
+              <button class="btn btn-primary open-course-view" data-course-id="polity-admin">View Course Details →</button>
+            </div>
+          </div>
+
+          <!-- Course 5: TNPSC Test Batch-1 -->
+          <div class="exam-card" data-category="tnpsc" data-reveal="true" style="--delay: 250ms;">
+            <div class="exam-badge tnpsc">TNPSC TEST BATCH</div>
+            <h3>TNPSC TEST BATCH-1</h3>
+            <p class="ideal-for"><strong>Ideal for:</strong> Candidates who completed syllabus once and need intense test practice.</p>
+            <ul class="exam-features">
+              <li><i data-lucide="check" class="icon-check"></i> 50+ full-length model tests & schedule</li>
+              <li><i data-lucide="check" class="icon-check"></i> Line-by-line Samacheer Kalvi test series</li>
+              <li><i data-lucide="check" class="icon-check"></i> State-wide rank comparison</li>
+            </ul>
+            <div class="card-footer-flex">
+              <span class="course-price-tag">₹3,499.00</span>
+              <button class="btn btn-primary open-course-view" data-course-id="tnpsc-testbatch">View Course Details →</button>
+            </div>
+          </div>
+
+          <!-- Course 6: FLEXI Fast-Track Program -->
+          <div class="exam-card" data-category="flexi" data-reveal="true" style="--delay: 350ms;">
+            <div class="exam-badge crash">FLEXI CRASH</div>
+            <h3>FLEXI Fast-Track Crash Batch</h3>
+            <p class="ideal-for"><strong>Ideal for:</strong> Working professionals needing flexible, self-paced & live evening classes.</p>
+            <ul class="exam-features">
+              <li><i data-lucide="check" class="icon-check"></i> Recorded lectures + 8:00 PM live sessions</li>
+              <li><i data-lucide="check" class="icon-check"></i> Rapid revision blueprints for new notifications</li>
+              <li><i data-lucide="check" class="icon-check"></i> WhatsApp mentor support group</li>
+            </ul>
+            <div class="card-footer-flex">
+              <span class="course-price-tag">₹4,999.00</span>
+              <button class="btn btn-primary open-course-view" data-course-id="flexi-crash">View Course Details →</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Student Reviews Showcase -->
+        <div class="reviews-showcase-container" style="margin-top:70px;">
+          <div class="section-header" data-reveal="true">
+            <span class="section-tag">STUDENT SUCCESS & TESTIMONIALS</span>
+            <h3 class="section-title">What Our Aspirants Say About GreenInk</h3>
+          </div>
+
+          <div class="reviews-grid">
+            <div class="review-card" data-reveal="true" style="--delay: 100ms;">
+              <div class="review-header">
+                <strong>Amirtha Priya</strong>
+                <span class="stars"><i data-lucide="star" class="icon-star"></i><i data-lucide="star" class="icon-star"></i><i data-lucide="star" class="icon-star"></i><i data-lucide="star" class="icon-star"></i><i data-lucide="star" class="icon-star"></i></span>
+              </div>
+              <p>"Nagaraj Sir's History class is an excellent session. Story narrative teaching with polite responses. He has years on his fingertips!"</p>
+            </div>
+
+            <div class="review-card" data-reveal="true" style="--delay: 200ms;">
+              <div class="review-header">
+                <strong>Banu Priya</strong>
+                <span class="stars"><i data-lucide="star" class="icon-star"></i><i data-lucide="star" class="icon-star"></i><i data-lucide="star" class="icon-star"></i><i data-lucide="star" class="icon-star"></i><i data-lucide="star" class="icon-star"></i></span>
+              </div>
+              <p>"As a student at GreenInk, it has been a valuable part of my preparation. Faculty members are knowledgeable and approachable."</p>
+            </div>
+
+            <div class="review-card" data-reveal="true" style="--delay: 300ms;">
+              <div class="review-header">
+                <strong>OpsMonster</strong>
+                <span class="stars"><i data-lucide="star" class="icon-star"></i><i data-lucide="star" class="icon-star"></i><i data-lucide="star" class="icon-star"></i><i data-lucide="star" class="icon-star"></i><i data-lucide="star" class="icon-star"></i></span>
+              </div>
+              <p>"Attended bank coaching classes—exceptional experience! Comprehensive study materials, structured sessions, and friendly faculty."</p>
+            </div>
+
+            <div class="review-card" data-reveal="true" style="--delay: 400ms;">
+              <div class="review-header">
+                <strong>Charumathi Deivasigamani</strong>
+                <span class="stars"><i data-lucide="star" class="icon-star"></i><i data-lucide="star" class="icon-star"></i><i data-lucide="star" class="icon-star"></i><i data-lucide="star" class="icon-star"></i><i data-lucide="star" class="icon-star"></i></span>
+              </div>
+              <p>"Having no idea about TNPSC, I started with GreenInk. Shortcuts, tricks, techniques, and daily tests helped me gain confidence."</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. STORE SECTION (Books & Study Material) -->
+    <section id="store" class="section store-section">
+      <div class="container">
+        <div class="section-header" data-reveal="true">
+          <span class="section-tag">PUBLICATIONS & STUDY STORE</span>
+          <h2 class="section-title">GreenInk Official Books & Materials</h2>
+          <p class="section-subtitle">Comprehensive Samacheer Kalvi workbooks, previous year solved question banks & current affairs digests.</p>
+        </div>
+
+        <div class="store-grid">
+          <div class="store-card" data-reveal="true" style="--delay: 100ms;">
+            <div class="store-badge"><i data-lucide="book-open" class="icon-inline"></i> BESTSELLER</div>
+            <h3>TNPSC Group I & II General Studies Solved Bank</h3>
+            <p>Authored by Ilayaraja Kannan sir. Unit-wise question breakdown with detailed explanations in Tamil & English.</p>
+            <div class="store-price"><span class="old-price">₹899</span> ₹599</div>
+            <button class="btn btn-primary btn-full open-modal" data-course="TNPSC Solved Book">Order Book Online</button>
+          </div>
+
+          <div class="store-card" data-reveal="true" style="--delay: 200ms;">
+            <div class="store-badge"><i data-lucide="sparkles" class="icon-inline"></i> NEW RELEASE</div>
+            <h3>Banking Reasoning & Quantitative Formula Blueprint</h3>
+            <p>Authored by Mohan Kumar sir. 1500+ shortcut tricks, speed math formulas, and bank prelims test papers.</p>
+            <div class="store-price"><span class="old-price">₹699</span> ₹449</div>
+            <button class="btn btn-primary btn-full open-modal" data-course="Banking Blueprint Book">Order Book Online</button>
+          </div>
+
+          <div class="store-card" data-reveal="true" style="--delay: 300ms;">
+            <div class="store-badge"><i data-lucide="book-open" class="icon-inline"></i> ESSENTIAL</div>
+            <h3>Yearly Current Affairs & Tamil Aptitude Digest 2026</h3>
+            <p>Month-by-month government schemes, sports, awards & Tamil Nadu administration key notes.</p>
+            <div class="store-price"><span class="old-price">₹499</span> ₹299</div>
+            <button class="btn btn-primary btn-full open-modal" data-course="Current Affairs Digest">Order Book Online</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FEATURES SECTION (PMS Mentorship) -->
+    <section id="features" class="section features-section">
+      <div class="container">
+        <div class="mentorship-box" data-reveal="true">
+          <div class="mentorship-content">
+            <div class="award-pill">
+              <i data-lucide="award" class="icon-inline"></i>
+              <span>Award-Winning Educational Methodology</span>
+            </div>
+            <h2>Personalised Mentorship System (PMS)</h2>
+            <p class="mentorship-lead">Redefining competitive exam preparation through data-driven research on how students fail, how toppers practice, and how technology optimizes daily revision.</p>
+
+            <div class="pms-features-grid">
+              <div class="pms-feature" data-reveal="true" style="--delay: 100ms;">
+                <div class="pms-icon"><i data-lucide="graduation-cap" class="icon-pms"></i></div>
+                <div>
+                  <h4>1-to-1 Cleared Faculty Mentors</h4>
+                  <p>Direct guidance from mentors who have personally cleared government exams.</p>
+                </div>
+              </div>
+
+              <div class="pms-feature" data-reveal="true" style="--delay: 200ms;">
+                <div class="pms-icon"><i data-lucide="bar-chart-3" class="icon-pms"></i></div>
+                <div>
+                  <h4>Daily Weakness Analytics</h4>
+                  <p>AI-backed analytics identifying accuracy drops and speed bottlenecks.</p>
+                </div>
+              </div>
+
+              <div class="pms-feature" data-reveal="true" style="--delay: 300ms;">
+                <div class="pms-icon"><i data-lucide="clock" class="icon-pms"></i></div>
+                <div>
+                  <h4>24/7 Doubt Resolution</h4>
+                  <p>Instant doubt clearing and personalized revision schedules.</p>
+                </div>
+              </div>
+
+              <div class="pms-feature" data-reveal="true" style="--delay: 400ms;">
+                <div class="pms-icon"><i data-lucide="users" class="icon-pms"></i></div>
+                <div>
+                  <h4>For All Learning Backgrounds</h4>
+                  <p>Flexible online & hybrid options tailored for students, working professionals & homemakers.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pms-cta">
+              <button class="btn btn-lime open-modal">Book 1-on-1 Free Mentor Consultation</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. EVENTS SECTION -->
+    <section id="events" class="section events-section">
+      <div class="container">
+        <div class="section-header" data-reveal="true">
+          <span class="section-tag">SEMINARS & WORKSHOPS</span>
+          <h2 class="section-title">Upcoming Orientation Events & Masterclasses</h2>
+          <p class="section-subtitle">Interact live with Dr. Sylendra Babu IPS, Mohan Kumar sir, Ilayaraja Kannan sir & Bharathi Baskar.</p>
+        </div>
+
+        <div class="events-grid">
+          <div class="event-card" data-reveal="true" style="--delay: 100ms;">
+            <div class="event-date">
+              <span class="date-num">18</span>
+              <span class="date-month">AUG</span>
+            </div>
+            <div class="event-details">
+              <h3>TNPSC Group 4 Strategy & Time Management Masterclass</h3>
+              <p><i data-lucide="video" class="icon-inline"></i> Online Live Stream & Campus Workshop • 10:00 AM</p>
+              <p class="event-speaker">Speaker: Bharathi Baskar & Dr. Sylendra Babu IPS</p>
+              <button class="btn btn-secondary open-modal" data-course="TNPSC Event Registration">Register for Free</button>
+            </div>
+          </div>
+
+          <div class="event-card" data-reveal="true" style="--delay: 200ms;">
+            <div class="event-date">
+              <span class="date-num">25</span>
+              <span class="date-month">AUG</span>
+            </div>
+            <div class="event-details">
+              <h3>Banking & Central Govt Exams Speed Math Secrets</h3>
+              <p><i data-lucide="video" class="icon-inline"></i> Online Interactive Webinar • 06:00 PM</p>
+              <p class="event-speaker">Speaker: Mohan Kumar sir (Ex-Banker)</p>
+              <button class="btn btn-secondary open-modal" data-course="Banking Event Registration">Register for Free</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CAREERS SECTION -->
+    <section id="careers" class="section careers-section">
+      <div class="container">
+        <div class="careers-box" data-reveal="true">
+          <div class="careers-content">
+            <span class="section-tag">JOIN OUR TEAM</span>
+            <h2>Careers at GreenInk Academy</h2>
+            <p>Are you passionate about shaping the next generation of government officers and educators? GreenInk CCE is hiring top academic talent, cleared faculty mentors, and tech innovators.</p>
+
+            <div class="careers-roles" data-reveal="true" style="--delay: 150ms;">
+              <div class="role-pill"><i data-lucide="graduation-cap" class="icon-inline"></i> Subject Matter Experts</div>
+              <div class="role-pill"><i data-lucide="users" class="icon-inline"></i> 1-on-1 Cleared Mentors</div>
+              <div class="role-pill"><i data-lucide="book-open" class="icon-inline"></i> Content Writers</div>
+              <div class="role-pill"><i data-lucide="phone" class="icon-inline"></i> Student Counselors</div>
+            </div>
+
+            <button class="btn btn-primary open-modal" data-course="Career Application" style="margin-top:20px;">Apply for Open Positions</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. BLOG SECTION -->
+    <section id="blog" class="section blog-section">
+      <div class="container">
+        <div class="section-header" data-reveal="true">
+          <span class="section-tag">EXAM GUIDES & NEWS</span>
+          <h2 class="section-title">GreenInk Official Learning Blog</h2>
+          <p class="section-subtitle">Expert strategy articles, notification updates, and subject revision notes.</p>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card" data-reveal="true" style="--delay: 100ms;">
+            <span class="blog-category">TNPSC STRATEGY</span>
+            <h3>How to Score 180+ in TNPSC Group 2 Prelims 2026</h3>
+            <p>By Ilayaraja Kannan sir. Line-by-line breakdown of high-weightage topics in Samacheer Kalvi books.</p>
+            <a href="#contact" class="read-more">Read Full Article →</a>
+          </article>
+
+          <article class="blog-card" data-reveal="true" style="--delay: 200ms;">
+            <span class="blog-category">BANKING TIPS</span>
+            <h3>5 Mental Calculation Tricks for SBI PO Quantitative Aptitude</h3>
+            <p>By Mohan Kumar sir. Speed multiplication, square root shortcuts, and time management hacks.</p>
+            <a href="#contact" class="read-more">Read Full Article →</a>
+          </article>
+
+          <article class="blog-card" data-reveal="true" style="--delay: 300ms;">
+            <span class="blog-category">CURRENT AFFAIRS</span>
+            <h3>Tamil Nadu Government Schemes & Welfare Projects 2026</h3>
+            <p>Comprehensive list of state government initiatives frequently asked in competitive exams.</p>
+            <a href="#contact" class="read-more">Read Full Article →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. GREENINK LMS SECTION -->
+    <section id="lms" class="section lms-section">
+      <div class="container">
+        <div class="lms-box" data-reveal="true">
+          <div class="lms-header">
+            <span class="section-tag">DIGITAL LEARNING PORTAL</span>
+            <h2>GreenInk AI-Integrated LMS & Mobile App</h2>
+            <p>Powered by AI analytics to transform practice into smart learning with cognitive-level tracking and active recall systems.</p>
+          </div>
+
+          <div class="lms-features-row">
+            <div class="lms-card" data-reveal="true" style="--delay: 100ms;">
+              <div class="lms-icon"><i data-lucide="laptop" class="icon-lms"></i></div>
+              <h4>Unlimited Practice & Tests</h4>
+              <p>Practice as much as you want with unlimited exercises tailored to your performance.</p>
+            </div>
+            <div class="lms-card" data-reveal="true" style="--delay: 200ms;">
+              <div class="lms-icon"><i data-lucide="bar-chart-2" class="icon-lms"></i></div>
+              <h4>Personalized Weakness Reports</h4>
+              <p>Track repeated mistakes, accuracy drops, and cognitive concept understanding.</p>
+            </div>
+            <div class="lms-card" data-reveal="true" style="--delay: 300ms;">
+              <div class="lms-icon"><i data-lucide="headphones" class="icon-lms"></i></div>
+              <h4>Bilingual & Audible Notes</h4>
+              <p>Downloadable & audible revision notes in Tamil & English. Study anywhere, anytime.</p>
+            </div>
+          </div>
+
+          <div class="lms-cta">
+            <button class="btn btn-lime open-modal" data-course="LMS Portal Access">Request LMS Student Demo Account</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND AMBASSADOR SECTION (Bharathi Baskar) -->
+    <section id="ambassador" class="section ambassador-section">
+      <div class="container">
+        <div class="ambassador-card" data-reveal="true">
+          <div class="ambassador-badge">PROUD BRAND AMBASSADOR</div>
+          <div class="ambassador-grid">
+            <div class="ambassador-info">
+              <h2>Bharathi Baskar</h2>
+              <p class="ambassador-title">Renowned Tamil Orator, Motivational Speaker & Writer</p>
+              <p class="ambassador-bio">
+                Bharathi Baskar has inspired lakhs of students and civil services aspirants across India. 
+                Recipient of prestigious honours such as the <strong>Rajeev-Mooppanar Award</strong> and <strong>Tamil Sundar Award</strong> for her immense contributions to education, literature, and public speaking.
+              </p>
+              <blockquote class="ambassador-quote">
+                "Every student holds the potential for greatness. At GreenInk, we provide the guidance, discipline, and technology to turn your ambition into government exam success."
+              </blockquote>
+              <div class="awards-tags">
+                <span class="tag"><i data-lucide="award" class="icon-inline"></i> Rajeev-Mooppanar Award</span>
+                <span class="tag"><i data-lucide="award" class="icon-inline"></i> Tamil Sundar Award</span>
+                <span class="tag"><i data-lucide="mic" class="icon-inline"></i> Pattimandram Legend</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. CONTACT & FOOTER SECTION -->
+    <footer id="contact" class="footer">
+      <div class="container footer-grid">
+        <div class="footer-col brand-col" data-reveal="true" style="--delay: 100ms;">
+          <div class="footer-logo">
+            <span class="brand-name">GREEN<span class="highlight">INK</span></span>
+            <span class="brand-tag">ACADEMY</span>
+          </div>
+          <p class="footer-desc">The premier tech-enabled institute for competitive exam coaching, study store, LMS portal, and personalized mentorship in Tamil Nadu.</p>
+          <div class="footer-contact">
+            <p><i data-lucide="phone" class="icon-inline"></i> Phone: <a href="tel:+918428775012">+91 84287 75012</a></p>
+            <p><i data-lucide="map-pin" class="icon-inline"></i> Location: Tamil Nadu, India</p>
+          </div>
+        </div>
+
+        <div class="footer-col" data-reveal="true" style="--delay: 200ms;">
+          <h4>Navigation Links</h4>
+          <ul>
+            <li><a href="#website-hero">Home</a></li>
+            <li><a href="#about">About GreenInk</a></li>
+            <li><a href="#courses">Courses Coaching</a></li>
+            <li><a href="#store">Publications Store</a></li>
+            <li><a href="#features">PMS Mentorship</a></li>
+            <li><a href="#events">Orientation Events</a></li>
+            <li><a href="#careers">Join Our Team</a></li>
+            <li><a href="#blog">Learning Blog</a></li>
+            <li><a href="#lms">GreenInk LMS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col" data-reveal="true" style="--delay: 300ms;">
+          <h4>Top Exams</h4>
+          <ul>
+            <li><a href="#courses">TNPSC Group I, II, IV</a></li>
+            <li><a href="#courses">Banking IBPS & SBI</a></li>
+            <li><a href="#courses">SSC CGL & CHSL</a></li>
+            <li><a href="#courses">Railways RRB Exams</a></li>
+            <li><a href="#courses">TET Teacher Eligibility</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col" data-reveal="true" style="--delay: 400ms;">
+          <h4>Get In Touch</h4>
+          <p>Have questions about exam eligibility, course fees, or store orders? Speak to our expert counselors.</p>
+          <button class="btn btn-lime open-modal">Request Callback</button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container bottom-flex">
+          <p>© 2026 GreenInk Academy. All rights reserved. Designed for Exam Success.</p>
+          <div class="footer-policies">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cancellation Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- COURSE DETAIL SUB-PAGE MODAL DRAWER -->
+  <div id="course-detail-drawer" class="modal-overlay">
+    <div class="modal-card course-detail-card">
+      <button id="close-course-drawer" class="modal-close">&times;</button>
+      
+      <div class="course-detail-grid">
+        <!-- Main Detail Left -->
+        <div class="detail-main">
+          <div class="detail-badge" id="cd-badge">TN TET</div>
+          <h2 id="cd-title">TET 2026 BATCH-1</h2>
+          <p class="cd-ideal" id="cd-ideal">• Govt & aided school teachers • Private school teachers • B.Ed / D.T.Ed graduates and final year students</p>
+
+          <div class="detail-box">
+            <h3>Course Overview</h3>
+            <p id="cd-overview">Complete syllabus coverage with special focus on Child Psychology & Pedagogy. Regular tests with detailed discussion for continuous improvement. Soft copy topic-wise one-liner notes for quick revision.</p>
+            <ul class="cd-bullets" id="cd-overview-bullets">
+              <li><i data-lucide="check" class="icon-check"></i> Daily live online classes (Zoom)</li>
+              <li><i data-lucide="check" class="icon-check"></i> Daily doubt-clearing session at a fixed standard time</li>
+              <li><i data-lucide="check" class="icon-check"></i> Dedicated WhatsApp / Telegram community support</li>
+              <li><i data-lucide="check" class="icon-check"></i> Weekly tests for continuous assessment & 500+ Daily Micro Tests</li>
+            </ul>
+          </div>
+
+          <div class="detail-box">
+            <h3>What You'll Learn</h3>
+            <ul class="cd-bullets" id="cd-learn-bullets">
+              <li><i data-lucide="check" class="icon-check"></i> Understand exam pattern through Previous Year Questions (PYQs)</li>
+              <li><i data-lucide="check" class="icon-check"></i> Practice most-expected, board-standard questions with clarity</li>
+              <li><i data-lucide="check" class="icon-check"></i> Develop strong conceptual foundation in core subjects</li>
+              <li><i data-lucide="check" class="icon-check"></i> Gain confidence, speed, accuracy, and complete exam readiness</li>
+            </ul>
+          </div>
+
+          <div class="detail-box">
+            <h3>Instant Access & Learning Benefits</h3>
+            <ul class="cd-bullets" id="cd-access-bullets">
+              <li><i data-lucide="check" class="icon-check"></i> Immediate access to live class links and schedule</li>
+              <li><i data-lucide="check" class="icon-check"></i> Direct entry to WhatsApp / Telegram support community</li>
+              <li><i data-lucide="check" class="icon-check"></i> Access to recorded sessions on GreenInk Mobile App</li>
+              <li><i data-lucide="check" class="icon-check"></i> Downloadable study materials and one-liner notes</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sidebar Right -->
+        <div class="detail-sidebar">
+          <div class="sidebar-price-card">
+            <span class="fee-label">Course Fee:</span>
+            <div class="sidebar-price" id="cd-price">₹7,080.00</div>
+            <p class="tax-info">Inclusive of all live classes, test series & digital study materials.</p>
+            
+            <button class="btn btn-lime btn-full open-modal" id="cd-enroll-btn">Enroll & Pay Now</button>
+            <button class="btn btn-outline btn-full open-modal" style="margin-top:10px;">Book Free Trial Class</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Enrollment / Callback Modal -->
+  <div id="enroll-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button id="close-modal-btn" class="modal-close">&times;</button>
+      <div class="modal-header">
+        <span class="modal-tag">GREENINK CCE</span>
+        <h3>Request Free Demo Class & Counseling</h3>
+        <p>Fill out the form below and our mentor will get in touch with you within 15 minutes.</p>
+      </div>
+      <form id="enroll-form" class="modal-form">
+        <div class="form-group">
+          <label for="student-name">Full Name *</label>
+          <input type="text" id="student-name" required placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+          <label for="student-phone">Phone / WhatsApp Number *</label>
+          <input type="tel" id="student-phone" required placeholder="e.g. 98765 43210">
+        </div>
+
+        <div class="form-group">
+          <label for="target-exam">Select Target Exam / Service *</label>
+          <select id="target-exam" required>
+            <option value="">-- Choose Category --</option>
+            <option value="TNPSC Group I, II, IV">TNPSC (Group I, II, IIA, IV)</option>
+            <option value="Banking IBPS/SBI">Banking (IBPS | SBI)</option>
+            <option value="SSC Exams">SSC (CGL | CHSL | MTS)</option>
+            <option value="Railways RRB">Railways (RRB NTPC/ALP)</option>
+            <option value="TET 2026 Batch">TET Teacher Eligibility Test</option>
+            <option value="TNUSRB Police">TNUSRB Police / Fire Services</option>
+            <option value="Technical Exams">Engineering / Technical AE/JE</option>
+            <option value="Book Store Order">Official Book Store Inquiry</option>
+            <option value="LMS Portal Access">GreenInk LMS Access</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Submit & Get Free Counseling</button>
+      </form>
+      <div id="modal-success" class="modal-success-msg hidden">
+        🎉 <strong>Thank You!</strong> Your request has been received. Our senior mentor will call you shortly at <span id="saved-phone"></span>.
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING QUICK-CONNECT ACTION HUB (Bottom-Right) -->
+  <div class="floating-hub">
+    <!-- WhatsApp Direct Trigger -->
+    <a href="https://wa.me/918428775012?text=Hello%20GreenInk%20Academy%2C%20I%20would%20like%20to%20know%20more%20about%20your%20coaching%20programs." 
+       target="_blank" 
+       id="whatsapp-float-btn" 
+       class="float-btn float-whatsapp" 
+       title="Chat with Senior Mentor on WhatsApp">
+      <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.072-1.026-.062-.246-.084-.564-.207-.98-.387-1.747-.756-2.875-2.529-2.962-2.645-.088-.116-.717-.954-.717-1.821 0-.867.452-1.294.613-1.468.161-.174.351-.217.469-.217.118 0 .235.001.338.006.109.005.255-.041.399.305.148.356.507 1.236.551 1.326.044.09.073.195.015.311-.059.116-.088.188-.176.289-.088.101-.186.226-.265.304-.09.088-.184.184-.079.364.105.18.468.772 1.004 1.249.691.614 1.274.805 1.454.895.18.09.286.076.393-.047.107-.123.456-.531.577-.713.121-.182.243-.152.406-.091.163.061 1.034.488 1.21.577.176.089.294.133.338.208.044.076.044.437-.1 1.042zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.981-1.306A9.957 9.957 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+      </svg>
+      <span class="float-tooltip">Chat with Senior Mentor</span>
+    </a>
+
+    <!-- GreenInk AI Counseling Chatbot Trigger -->
+    <button id="chatbot-float-btn" class="float-btn float-chatbot" title="Open GreenInk AI Counselor">
+      <span class="bot-status-dot"></span>
+      <i data-lucide="sparkles" class="bot-icon"></i>
+      <span class="float-btn-label">AI Counselor</span>
+    </button>
+  </div>
+
+  <!-- GREENINK CONVERSATIONAL AI CHATBOT DRAWER (Pure Chat Message Flow) -->
+  <div id="chatbot-drawer" class="chatbot-drawer">
+    <!-- Chat Header -->
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">
+          <i data-lucide="sparkles" class="icon-sm"></i>
+        </div>
+        <div>
+          <h4 class="chat-title">GreenInk AI Counselor</h4>
+          <span class="chat-status"><span class="status-live-dot"></span> Online • 60+ Live Answers</span>
+        </div>
+      </div>
+      <div class="chat-header-actions">
+        <button id="restart-chat-btn" class="chat-header-btn" title="Restart Chat">
+          <i data-lucide="clock" class="icon-sm"></i>
+        </button>
+        <button id="close-chatbot-btn" class="chat-header-btn" title="Close Chat">&times;</button>
+      </div>
+    </div>
+
+    <!-- Category Selector Chips (Topic Shortcuts) -->
+    <div class="chat-category-chips">
+      <button class="chat-chip active" data-chat-cat="all">All Topics</button>
+      <button class="chat-chip" data-chat-cat="tnpsc">🎯 TNPSC</button>
+      <button class="chat-chip" data-chat-cat="banking">🏦 Banking & SSC</button>
+      <button class="chat-chip" data-chat-cat="tet">🎓 TN TET</button>
+      <button class="chat-chip" data-chat-cat="pms">🥇 Mentorship</button>
+      <button class="chat-chip" data-chat-cat="timings">⏱️ Timings</button>
+      <button class="chat-chip" data-chat-cat="lms">📱 LMS & App</button>
+      <button class="chat-chip" data-chat-cat="store">📖 Book Store</button>
+      <button class="chat-chip" data-chat-cat="fees">💳 Fees & Admission</button>
+      <button class="chat-chip" data-chat-cat="academy">🏛️ About Us</button>
+    </div>
+
+    <!-- Active Chat Conversation Stream -->
+    <div class="chat-conversation-area" id="chat-conversation-area">
+      <!-- Chat bubbles injected dynamically via main.js -->
+    </div>
+
+    <!-- Typing Indicator (Hidden by default) -->
+    <div id="chat-typing-indicator" class="typing-indicator-row hidden">
+      <div class="typing-bubble">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <span class="typing-label">AI Counselor is typing...</span>
+    </div>
+
+    <!-- Chat Footer & Input Form -->
+    <div class="chat-footer">
+      <form id="chat-input-form" class="chat-form">
+        <input type="text" id="chat-user-input" placeholder="Type your question (e.g. TET fees, TNPSC batch)..." required autocomplete="off">
+        <button type="submit" class="chat-send-btn" title="Send Question">
+          <i data-lucide="arrow-right" class="icon-sm"></i>
+        </button>
+      </form>
+      <div class="chat-footer-handoff">
+        <span>Prefer a human mentor?</span>
+        <a href="https://wa.me/918428775012?text=Hello%20GreenInk%20Mentor%2C%20I%20am%20chatting%20on%20your%20website%20and%20need%20personalized%20counseling." 
+           target="_blank" 
+           class="wa-handoff-link">
+          <svg class="wa-icon-sm" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.072-1.026-.062-.246-.084-.564-.207-.98-.387-1.747-.756-2.875-2.529-2.962-2.645-.088-.116-.717-.954-.717-1.821 0-.867.452-1.294.613-1.468.161-.174.351-.217.469-.217.118 0 .235.001.338.006.109.005.255-.041.399.305.148.356.507 1.236.551 1.326.044.09.073.195.015.311-.059.116-.088.188-.176.289-.088.101-.186.226-.265.304-.09.088-.184.184-.079.364.105.18.468.772 1.004 1.249.691.614 1.274.805 1.454.895.18.09.286.076.393-.047.107-.123.456-.531.577-.713.121-.182.243-.152.406-.091.163.061 1.034.488 1.21.577.176.089.294.133.338.208.044.076.044.437-.1 1.042zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.981-1.306A9.957 9.957 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+          </svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
