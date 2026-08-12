@@ -176,8 +176,8 @@ function renderCanvas(frameIdx, force = false) {
   const srcWidth = Math.floor(imgWidth * 0.84);
   const srcHeight = Math.floor(imgHeight * 0.80);
 
-  // Contain scaling
-  const scale = Math.min(cWidth / srcWidth, cHeight / srcHeight);
+  // Adaptive COVER scaling: Fills 100% of the viewport on all screen sizes (desktop, tablet, mobile) with ZERO black blank space
+  const scale = Math.max(cWidth / srcWidth, cHeight / srcHeight);
 
   const drawWidth = srcWidth * scale;
   const drawHeight = srcHeight * scale;
