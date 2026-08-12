@@ -73,8 +73,6 @@ const loaderOverlay = document.getElementById('loader');
 const loaderPercent = document.getElementById('loader-percent');
 const spinnerProgress = document.getElementById('spinner-progress');
 const progressBar = document.getElementById('progress-bar');
-const frameCounter = document.getElementById('frame-counter');
-const scrollBadge = document.getElementById('scroll-badge');
 const navbar = document.getElementById('navbar');
 const cinematicSection = document.getElementById('cinematic-book');
 
@@ -193,12 +191,6 @@ function renderCanvas(frameIdx, force = false) {
 
   ctx.drawImage(img, srcX, srcY, srcWidth, srcHeight, drawX, drawY, drawWidth, drawHeight);
   ctx.filter = 'none';
-
-  // Update Frame Badge
-  const displayNum = String(clampedIndex + 1).padStart(3, '0');
-  if (frameCounter) {
-    frameCounter.textContent = `Frame ${displayNum} / ${TOTAL_FRAMES}`;
-  }
 }
 
 // Scroll position & Scene Transition Manager
@@ -224,16 +216,14 @@ function onScroll() {
         targetFrameIndex = bookFraction * (TOTAL_FRAMES - 1);
 
         canvas.style.opacity = '1';
-        if (scrollBadge) scrollBadge.style.opacity = '1';
       } 
-      // SCENE 04 - 05: 0.85 to 1.00 Cinematic Transition (Canvas & Pill Fade Out)
+      // SCENE 04 - 05: 0.85 to 1.00 Cinematic Transition (Canvas Fade Out)
       else {
         targetFrameIndex = TOTAL_FRAMES - 1;
         const fadeProgress = (scrollFraction - 0.85) / 0.15;
         const opacity = Math.max(0, 1 - fadeProgress);
 
         canvas.style.opacity = String(opacity);
-        if (scrollBadge) scrollBadge.style.opacity = String(opacity);
       }
     }
   }
