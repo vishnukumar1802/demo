@@ -86,10 +86,10 @@ let currentFrameIndex = 0;
 let lastRenderedIndex = -1;
 let isFirstBatchReady = false;
 
-// Path helper for 240 Fimages
+// Path helper for 240 Fimages (served from public/Fimages)
 function getFramePath(index) {
   const frameNum = String(index).padStart(3, '0');
-  return `./Fimages/ezgif-frame-${frameNum}.jpg`;
+  return `/Fimages/ezgif-frame-${frameNum}.jpg`;
 }
 
 // Preload 240 frame images
